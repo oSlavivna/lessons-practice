@@ -30,16 +30,170 @@ body {
   transform: rotate(45deg);
   position: absolute;
 
-  z-index: 12;
+  z-index: 1;
   left: 163px;
-  top: 288px;
+  top: 389px;
 }
 .text {
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotate(-45deg);
+
+  font-family: "Reenie Beanie";
+  font-size: 2.5rem;
+  /* letter-spacing: -0.2em; */
+
+  position: relative;
+
+  right: 4%;
+  top: 46%;
 }
+/* ____*/
+.first-section {
+  width: 50rem;
+  position: relative;
+  top: 9rem;
+  left: 58rem;
+}
+.p-Justo {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 57px;
+  margin-bottom: 2rem;
+}
+.first-btn {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 2.1rem;
+  line-height: 57px;
+
+  border: 1px solid #000000;
+  padding: 0.5rem 1rem;
+}
+/* ------- */
+.ballon {
+  width: 26rem;
+  position: relative;
+  z-index: 2;
+  left: 10%;
+  top: 3.5rem;
+}
+.ballon img {
+  width: 100%;
+}
+/* --second-section--- */
+.blue-diamond {
+  width: 624px;
+  height: 624px;
+  background-color: #d4e6f3;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 38%;
+  top: 70rem;
+  z-index: 0;
+}
+.second-screen {
+  display: flex;
+  align-items: center;
+  margin-left: 10rem;
+  margin-top: 7.6rem;
+}
+.second-section {
+  /* position: relative; */
+  width: 40%;
+  margin-right: 20rem;
+}
+.hey {
+  font-family: "Reenie Beanie";
+  font-size: 5rem;
+}
+.second-section p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 30px;
+  margin: 4rem 0;
+  text-align: justify;
+}
+
+.girl-pink {
+  width: 26rem;
+  /* position: relative; */
+  z-index: 2;
+  left: 60%;
+  top: 3.5rem;
+}
+.girl-pink {
+  width: 100%;
+}
+/* Recent Work */
+.th-section {
+  margin-left: 57rem;
+  margin-top: 12rem;
+  width: 45%;
+}
+.th-section p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 57px;
+  margin-bottom: 7rem;
+}
+.you {
+  margin-left: 15rem;
+}
+.bgr-blue-diamont {
+  width: 624px;
+  height: 624px;
+  background-color: #d4e6f3;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  position: absolute;
+
+  left: 8rem;
+  top: 290%;
+}
+
+.bgr-blue-diamont h2 {
+  position: relative;
+  margin: 0;
+  transform: rotate(-45deg);
+  top: 28%;
+  right: -13%;
+  font-size: 4rem;
+}
+/* ---- */
+.about-man {
+  position: relative;
+  display: flex;
+  margin-top: 14rem;
+}
+
+.about-man img {
+  width: 43%;
+  margin-left: 5rem;
+  margin-right: 17rem;
+}
+
+.about-man p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+
+  width: 20%;
+  text-align: justify;
+}
+
+/* -------------------- */
 /* ----PAGE REZUME--- */
 .home {
   font-weight: 600;
