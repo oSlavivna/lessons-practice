@@ -173,14 +173,17 @@ body {
 .about-man {
   position: relative;
   display: flex;
-  margin-top: 14rem;
+  margin-top: 16rem;
 }
-
-.about-man img {
-  width: 43%;
+.smile {
+  width: 43%; 
   margin-left: 5rem;
   margin-right: 17rem;
 }
+
+.about-man img {
+  width: 100%;
+ }
 
 .about-man p {
   font-family: "Poppins";
