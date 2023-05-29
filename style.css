@@ -8,6 +8,11 @@ body {
   background-color: #f3eced;
 }
 /* PAGE HOME */
+.wrapper-main {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: white;
+}
 .general {
   max-width: 1920px;
   position: relative;
@@ -134,6 +139,7 @@ body {
 }
 /* Recent Work */
 .th-section {
+  /* position: absolute; */
   margin-left: 57rem;
   margin-top: 12rem;
   width: 45%;
@@ -145,6 +151,7 @@ body {
   font-size: 2.4rem;
   line-height: 57px;
   margin-bottom: 7rem;
+  margin-right: 2rem;
 }
 .you {
   margin-left: 15rem;
@@ -155,10 +162,10 @@ body {
   background-color: #d4e6f3;
   border-radius: 8px;
   transform: rotate(45deg);
-  position: absolute;
+  position: relative;
 
-  left: 8rem;
-  top: 290%;
+  left: 11rem;
+  top: -7rem;
 }
 
 .bgr-blue-diamont h2 {
@@ -173,17 +180,17 @@ body {
 .about-man {
   position: relative;
   display: flex;
-  margin-top: 16rem;
+  margin-top: -19rem;
 }
 .smile {
-  width: 43%; 
+  width: 43%;
   margin-left: 5rem;
   margin-right: 17rem;
 }
 
 .about-man img {
   width: 100%;
- }
+}
 
 .about-man p {
   font-family: "Poppins";
