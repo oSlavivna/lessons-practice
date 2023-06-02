@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #585858;
+}
+/* ----------- */
+header {
+  background-color: #f6f5f4;
+}
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 24px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Dela Gothic One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24.348px;
+  line-height: 100%;
+
+  letter-spacing: -0.02em;
+  color: black;
+  padding-right: 30px;
+  border-right: 1px solid #cabdbd;
+}
+ul {
+  display: flex;
+  gap: 30px;
+  padding-left: 30px;
+}
+.active {
+  color: black;
+}
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+.user img {
+  margin-right: 10px;
+}
+.user-name {
+  color: #757575;
+}
+.sign-in {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  letter-spacing: -0.04em;
+  color: black;
+}
+
+@media screen and (max-width: 760px) {
+  header {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-inline: 30px;
+  }
+}
