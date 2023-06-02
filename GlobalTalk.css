@@ -14,25 +14,23 @@ a {
   text-decoration: none;
   color: #585858;
 }
-/* MY LINKS */
-   .home {
-    display: flex;
-    gap: 30px;
-   
-    position: absolute;
-    left: 1rem;
-    top: 2%;
-    z-index: 6;
+/* MY PAGE LINKS */
+.home {
+  display: flex;
+  gap: 30px;
 
-     font-family: "Dela Gothic One";
-     font-weight: 600;
-     font-size: 1rem;
-     color: #c1a8a8;
-     text-decoration: none;
-     padding: 0.8rem;
-     border: 1px solid #c1a8a8;
-     border-radius: 25px;
-   }
+  position: absolute;
+  top: 2.5%;
+  z-index: 6;
+
+  font-weight: 800;
+  font-size: 1rem;
+  color: #c1a8a8;
+  text-decoration: none;
+  padding: 0.8rem;
+  border: 1px solid #c1a8a8;
+  border-radius: 25px;
+}
 /* ----------- */
 header {
   background-color: #f6f5f4;
@@ -72,6 +70,30 @@ ul {
 .active {
   color: black;
 }
+/*  код від АІ для псевдокласу*/
+li {
+  position: relative;
+}
+
+li:last-child::after {
+  content: "";
+  position: absolute;
+  top: 63%;
+  right: -22%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #585858 transparent transparent transparent;
+  cursor: pointer;
+}
+
+li:hover::after {
+  border-color: #000 transparent transparent transparent;
+}
+
+/*  */
 .user-menu {
   display: flex;
   align-items: center;
