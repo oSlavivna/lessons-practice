@@ -303,12 +303,20 @@ img {
   margin-top: 45rem;
 }
 
-.photos-row img {
-  
-}
+/* .photos-row img {
+} */
 
 /* -------------------- */
 /* ----PAGE REZUME--- */
+.my-links {
+  display: flex;
+  gap: 30px;
+
+  position: absolute;
+  left: 3rem;
+  top: 3%;
+  z-index: 6;
+}
 .home {
   font-weight: 600;
   font-size: 1rem;
@@ -317,12 +325,8 @@ img {
   padding: 0.8rem;
   border: 1px solid #c1a8a8;
   border-radius: 25px;
-
-  position: absolute;
-  left: 3rem;
-  top: 3%;
-  z-index: 6;
 }
+
 .first {
   width: 1240px;
   display: flex;
