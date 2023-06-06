@@ -75,7 +75,7 @@ li {
   position: relative;
 }
 
-li:last-child::after {
+/* li:last-child::after {
   content: "";
   position: absolute;
   top: 63%;
@@ -87,11 +87,22 @@ li:last-child::after {
   border-width: 5px 5px 0 5px;
   border-color: #585858 transparent transparent transparent;
   cursor: pointer;
-}
-
+} */
+/* 
 li:hover::after {
   border-color: #000 transparent transparent transparent;
-}
+} */
+  
+  li:last-child > a::after {
+  content:"›"; 
+  display: block;
+  height: auto;
+  margin-left: 5px;
+  transform: rotate(90deg);         
+  position: absolute;
+  top: 10%;
+  right: -22%;
+} 
 
 /*  */
 .user-menu {
