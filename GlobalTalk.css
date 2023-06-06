@@ -32,7 +32,8 @@ a {
   border-radius: 25px;
 }
 /* ----------- */
-header {
+header,
+.hero {
   background-color: #f6f5f4;
 }
 .wrapper {
@@ -43,6 +44,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-block: 24px;
+  position: relative;
 }
 
 .menu {
@@ -92,19 +94,19 @@ li {
 li:hover::after {
   border-color: #000 transparent transparent transparent;
 } */
-  
-  li:last-child > a::after {
-  content:"›"; 
+
+li:last-child > a::after {
+  content: "›";
   display: block;
   height: auto;
   margin-left: 5px;
-  transform: rotate(90deg);         
+  transform: rotate(90deg);
   position: absolute;
   top: 10%;
   right: -22%;
-} 
+}
 
-/*  */
+/* --------- */
 .user-menu {
   display: flex;
   align-items: center;
@@ -132,8 +134,114 @@ li:hover::after {
   color: black;
 }
 .sign-in::after {
-  content: '➡'; 
+  content: "➡";
   margin-left: 5px;
+}
+/* -----hero------ */
+
+.hero-text {
+  margin-top: 5.7rem  ;
+}
+
+.hero-text p:first-child {
+  color: #2b788b;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.14em;
+}
+h1 {
+  color: black;
+  font-family: "Dela Gothic One";
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 120%;
+  letter-spacing: -0.04em;
+
+  width: 30rem;
+  margin-block: 24px 30px;
+}
+.hero-text p:nth-of-type(2) {
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.04em;
+  color: #757575;
+  width: 75%;
+}
+
+.hero-text a {
+  display: block;
+  width: max-content;
+  padding: 14px 22px;
+  background: #c3dce3;
+  border-radius: 100px;
+
+  color: #2b788b;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+
+  margin-block: 32px 48px;
+}
+/* --- */
+.secondary-text {
+  display: flex;
+  width: 73%;
+  justify-content: space-between;
+  padding-bottom: 134px;
+
+  position: relative;
+}
+.secondary-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 59%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 33%;
+  background-color: #E0E0E0
+  ;
+}
+.secondary-wrapper {
+  text-align: center;
+}
+.secondary-child {
+  display: flex;
+  align-items: center;
+}
+.secondary-child img {
+margin-right: 10px;
+}
+.num {
+  font-family: "Dela Gothic One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+
+  color: #000000;
+}
+.num span {
+  color: #2b788b;
+}
+
+.mini-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.04em;
+  color: #585858;
+  margin-top: 3px;
+}
+/* --- */
+.hero-img {
+  position: absolute;
+  left: 45%;
+  top: 15%;
 }
 
 /* -------media screen------- */
