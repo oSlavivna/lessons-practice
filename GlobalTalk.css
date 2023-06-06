@@ -110,19 +110,31 @@ li:hover::after {
 .user-name {
   color: #757575;
 }
+.sign {
+  position: relative;
+}
 .sign-in {
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
   /* identical to box height, or 16px */
-
   letter-spacing: -0.04em;
   color: black;
 }
+.sign-in::after {
+  content: "→";
+  font-family: 'Montserrat';
+  font-weight: 900;
+  margin-left: 5px;
+}
 
+
+
+/* -------media screen------- */
 @media screen and (max-width: 760px) {
-  header {
+  .wrapper {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding-inline: 30px;
   }
