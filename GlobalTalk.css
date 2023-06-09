@@ -20,7 +20,7 @@ a {
   gap: 30px;
 
   position: absolute;
-  top: 2.5%;
+  top: 6.5%;
   z-index: 6;
 
   font-weight: 800;
@@ -234,7 +234,40 @@ h1 {
   left: 45%;
   top: 15%;
 }
-
+/* //////////////////// */
+/* online practice */
+.click-btn {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: #53b2ca;
+  color: white;
+  outline: none;
+  border: none;
+}
+.click-btn:hover{
+  background-color: #4b9fb4;
+}
+.enter-input {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+  color: #2b788b;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(179, 178, 178);
+}
+.enter-input:focus {
+  border: 2px solid blue; 
+}
+ 
+.enter-input::placeholder {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+  color: rgb(179, 178, 178);;
+}
+/* online practice */
+/* ////////////////////// */
 /* -------media screen------- */
 @media screen and (max-width: 760px) {
   .wrapper {
@@ -242,11 +275,18 @@ h1 {
     justify-content: center;
     gap: 20px;
     padding-inline: 30px;
+   
   }
+  .hero {
+    background-color: #9fdcff;
+    width: 100wh;
+    height: 100vh;
+  }
+  
   .hero-content {
     /* margin: 0 auto; */
     /* padding-inline: 30px; */
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     flex-direction: column;
   }
   .hero-text {
