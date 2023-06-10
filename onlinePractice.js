@@ -70,12 +70,14 @@ const input1 = document.querySelector("#input1");
 
 function inputValue() {
   const value = input1.value;
-  if (!isNaN(value)) {
+  if (!value) {
+    alert("You didn't enter anything!");
+  } else if (!isNaN(value)) {
     alert(`LOL, your age: ${value}`);
   } else {
-    alert(`We don\'t play: ${value} enter a number!`);
+    alert(`We don't play: ${value} enter a number!`);
   }
-  input1.value = '';
+  input1.value = "";
 }
 // чат GPT HELP
 function handleKeyPress(event) {
@@ -84,16 +86,20 @@ function handleKeyPress(event) {
   }
 }
 input1.addEventListener("keydown", handleKeyPress);
-// 
+//
 btn3.addEventListener("click", inputValue);
 //task3
 const btn4 = document.querySelector("#btn4");
 const input2 = document.querySelector("#input2");
 
-function yourAge () {
+function yourAge() {
   let userAge = 2023 - input2.value;
-  alert(userAge);
-  input2.value = '';
-} 
+  if (!input2.value) {
+    alert("2023 not your birth year");
+  } else {
+    alert(userAge);
+  }
+  input2.value = "";
+}
 btn4.addEventListener("click", yourAge);
 /////////////////////////////////
