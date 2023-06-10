@@ -245,6 +245,7 @@ h1 {
   color: white;
   outline: none;
   border: none;
+  
 }
 .click-btn:hover{
   background-color: #4b9fb4;
@@ -256,9 +257,10 @@ h1 {
   padding: 5px 20px;
   border-radius: 5px;
   border: 1px solid rgb(179, 178, 178);
+  margin-left: 0.5rem;
 }
 .enter-input:focus {
-  border: 2px solid blue; 
+  outline: 1px solid rgba(70, 79, 83, 0); 
 }
  
 .enter-input::placeholder {

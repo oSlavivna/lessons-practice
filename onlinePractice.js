@@ -1,6 +1,8 @@
 const homeElement = document.getElementById("home");
 homeElement.style.right = "2.5%"; // Задати відступ від правого краю
 homeElement.style.left = "auto"; // Забрати відступ з лівого краю (якщо він був заданий)
+const lessonBody = document.querySelector('body')
+
 
 // alert('hi')
 let arr = ["nick", "john", "mary"];
@@ -58,9 +60,13 @@ function showArr(arr) {
 
 btn2.addEventListener("click", showArr);
 //task2 change color
+const changePar = document.querySelector("#parColor");
 const btNcolor = document.querySelector("#btNcolor");
 function parColor() {
-  document.querySelector("#parColor").style.color = "red";
+  // Генеруємо випадковий RGB колір
+  const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+  
+  changePar.style.color = randomColor;
 }
 
 btNcolor.addEventListener("click", parColor);
