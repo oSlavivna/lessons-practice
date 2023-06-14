@@ -106,6 +106,7 @@ function yourAge() {
   } else {
     alert(userAge);
   }
+
   input2.value = "";
 }
 btn4.addEventListener("click", yourAge);
@@ -137,10 +138,10 @@ btn5.addEventListener("click", () => {
   const neWpar = document.createElement("p");
   neWpar.textContent = input5.value;
   body.appendChild(neWpar);
-  smtArr.push(input5.value)
+  smtArr.push(input5.value);
   console.log(smtArr);
   input5.value = "";
 });
-//  hometask 
+//  hometask
 // норм хедер щоб гамбургер працював
 // відео
