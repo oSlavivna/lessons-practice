@@ -110,3 +110,37 @@ function yourAge() {
 }
 btn4.addEventListener("click", yourAge);
 /////////////////////////////////
+// 13 06 урок
+// task 1
+const btn5 = document.querySelector("#btn5");
+const input5 = document.querySelector("#input5");
+const myPar = document.querySelector("#p5");
+let smtArr = [];
+
+// btn5.addEventListener('click', () => {
+// //  smtArr.push(input5.value)
+// //  console.log(smtArr);
+// // зміна тексту
+// myPar.textContent = input5.value ;
+//  input5.value = ''
+// })
+
+// TASK 2
+// btn5.addEventListener("click", () => {
+//   myPar.textContent = '1' + input5.value ;
+// });
+
+//  сторення елементів
+const body = document.querySelector("body");
+
+btn5.addEventListener("click", () => {
+  const neWpar = document.createElement("p");
+  neWpar.textContent = input5.value;
+  body.appendChild(neWpar);
+  smtArr.push(input5.value)
+  console.log(smtArr);
+  input5.value = "";
+});
+//  hometask 
+// норм хедер щоб гамбургер працював
+// відео

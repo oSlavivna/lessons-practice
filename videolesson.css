@@ -1,0 +1,35 @@
+.home {
+  display: flex;
+  gap: 30px;
+
+  position: absolute;
+  top: 2.5%;
+  left: 88%;
+  z-index: 2;
+
+  font-weight: 800;
+  font-size: 1rem;
+  color: #c1a8a8;
+  text-decoration: none;
+  padding: 0.8rem;
+  border: 1px solid #c1a8a8;
+  border-radius: 25px;
+}
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+.img-cont {
+  text-align: center;
+}
+
+.img {
+  display: none;
+  width: 50%;
+  margin: 0 auto 10px;
+}
+
+#happy,
+#sad {
+  cursor: pointer;
+}
