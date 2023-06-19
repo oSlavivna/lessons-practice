@@ -1,7 +1,9 @@
 const homeElement = document.getElementById("home");
+const taskpage = document.getElementById("taskpage");
 homeElement.style.right = "2.5%"; // Задати відступ від правого краю
-homeElement.style.left = "auto"; // Забрати відступ з лівого краю (якщо він був заданий)
-const lessonBody = document.querySelector("body");
+taskpage.style.right = "2.5%";
+taskpage.style.top = "8.5%";
+ 
 
 // alert('hi')
 let arr = ["nick", "john", "mary"];
@@ -211,7 +213,7 @@ for (let index = 0; index < answers.length; index++) {
 
 //cookies & local storage
 // save cookie ⬇
-document.cookie = "username=john doe";
+// document.cookie = "username=john doe";
 // key  = username. value=john doe  ⬇
 //localStorage.setItem("myCat", "Tom"); // записуємо
 //localStorage.getItem("myCat"); // отримуємо локал сторидж. вказавши ключ
