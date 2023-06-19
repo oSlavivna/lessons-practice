@@ -9,7 +9,8 @@
 const input1 = document.querySelector("#input1");
 const btn1 = document.querySelector("#btn1");
 const body = document.querySelector("body");
-//let userInputName = localStorage.getItem("userName");
+
+ 
 
 btn1.addEventListener("click", () => {
   if (input1.value !== "olha") {
@@ -20,7 +21,8 @@ btn1.addEventListener("click", () => {
     //
     input1.style.display = "none";
     btn1.style.display = "none";
-    //
+ 
+
     const newUserPar = document.createElement("p");
     newUserPar.textContent = "Hello " + userInputName;
     body.appendChild(newUserPar);
