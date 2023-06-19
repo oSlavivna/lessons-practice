@@ -136,12 +136,85 @@ const body = document.querySelector("body");
 
 btn5.addEventListener("click", () => {
   const neWpar = document.createElement("p");
+  const neWbutton = document.createElement("button");
   neWpar.textContent = input5.value;
-  body.appendChild(neWpar);
+  neWbutton.textContent = "delete";
+  // body.appendChild(neWpar);
+  // body.appendChild(neWbutton);
+  btn5.insertAdjacentElement("afterend", neWbutton);
+  btn5.insertAdjacentElement("afterend", neWpar);
+
+  neWbutton.classList.add("click-btn");
+  neWbutton.addEventListener("click", () => {
+    // body.removeChild(neWpar);
+    // body.removeChild(neWbutton);
+    neWpar.remove();
+    neWbutton.remove();
+  });
+  // запис даних з інпуту в локал сторидж
+  // localStorage.setItem('to do', input5.value) // оновлюється❌ не зберігає попереднє значення
   smtArr.push(input5.value);
+  localStorage.setItem("todos", JSON.stringify(smtArr));
   console.log(smtArr);
+
   input5.value = "";
 });
-//  hometask
-// норм хедер щоб гамбургер працював
-// відео
+// чат хелп
+input5.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Зупиняємо діяння за замовчуванням, щоб форма не відправлялась
+    btn5.click(); // Симулюємо клік на кнопку btn5
+  }
+});
+// arr from localStorage
+let storedToDos = localStorage.getItem("todos"); //в дужках-за яким ключем беремо
+//convert string-back arr
+let parseToDos = JSON.parse(storedToDos);
+console.log(parseToDos);
+
+for (let index = 0; index < parseToDos.length; index++) {
+  const toDoSpar = document.createElement("p");
+  toDoSpar.textContent = parseToDos[index];
+  // toDoSpar.insertAdjacentElement("afterend", btn5);
+  body.appendChild(toDoSpar);
+}
+
+//  hometask.13.06 : норм хедер щоб гамбургер працював & відео
+
+// 16 06
+const btn6 = document.querySelector("#btn6");
+const input6 = document.querySelector("#input6");
+
+btn6.addEventListener("click", () => {
+  const neWpar = document.createElement("p");
+
+  if (input6.value === "Olha") {
+    alert("yes! my name is " + input6.value);
+    body.appendChild((neWpar.textContent = "Правильно!"));
+  } else {
+    alert("try again");
+    body.appendChild((neWpar.textContent = "no!!!!!"));
+  }
+
+  input6.value = "";
+});
+
+// task 2
+const answers = document.querySelectorAll(".answ");
+
+for (let index = 0; index < answers.length; index++) {
+  answers[index].addEventListener("click", (e) => {
+    console.log(e.target.id);
+    alert(document.getElementById(e.target.id).textContent);
+  });
+}
+
+//cookies & local storage
+// save cookie ⬇
+document.cookie = "username=john doe";
+// key  = username. value=john doe  ⬇
+//localStorage.setItem("myCat", "Tom"); // записуємо
+//localStorage.getItem("myCat"); // отримуємо локал сторидж. вказавши ключ
+// alert(localStorage.getItem("myCat")); // Tom
+
+

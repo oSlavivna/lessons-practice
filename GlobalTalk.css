@@ -274,6 +274,10 @@ h1 {
   font-size: medium;
   color: rgb(179, 178, 178);
 }
+
+.answ {
+  cursor: pointer;
+}
 /* online practice */
 /* ////////////////////// */
 /* -------media screen------- */
