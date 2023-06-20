@@ -9,30 +9,29 @@ const body = document.querySelector("body");
 const wrapper = document.querySelector(".wrapper");
 const input1 = document.querySelector("#input1");
 const btn1 = document.querySelector("#btn1");
-const justPar = document.querySelector("#taskHidden");
+const justPar = document.querySelector("#justPar");
 
- let userInputName = localStorage.getItem("userName");
+btn1.addEventListener("click", () => {
+  let userInputName = input1.value;
 
-function createElement() {
+  if (userInputName !== "") {
+    localStorage.setItem("userName", userInputName);
+    createElement(userInputName);
+  }
+});
+
+function createElement(userName) {
   const newUserPar = document.createElement("p");
-  newUserPar.textContent = "Привіт " + userInputName;
+  newUserPar.textContent = "Привіт " + userName;
   justPar.insertAdjacentElement("afterend", newUserPar);
   wrapper.style.display = "none";
 }
- 
- if (userInputName ) {
-  createElement();
-} else {
-  btn1.addEventListener("click", () => {
- localStorage.setItem("userName", input1.value); 
-    createElement(); })
-  }
 
+const userInputName = localStorage.getItem("userName");
 
-   
-
-
-
+if (userInputName !== null) {
+  createElement(userInputName);
+}
 
 // addEventListener("click", () => {});
 
