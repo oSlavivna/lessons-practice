@@ -3,9 +3,7 @@ const taskpage = document.getElementById("taskpage");
 homeElement.style.right = "2.5%"; // Задати відступ від правого краю
 taskpage.style.right = "2.5%";
 taskpage.style.top = "8.5%";
- 
 
-// alert('hi')
 let arr = ["nick", "john", "mary"];
 for (let i = 0; i < arr.length; i++) {
   // alert ( i + i)
@@ -63,11 +61,12 @@ btn2.addEventListener("click", showArr);
 //task2 change color
 const changePar = document.querySelector("#parColor");
 const btNcolor = document.querySelector("#btNcolor");
+
 function parColor() {
   // Генеруємо випадковий RGB колір
-  const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-    Math.random() * 256
-  )}, ${Math.floor(Math.random() * 256)})`;
+  const randomColor = `rgb(${Math.floor(Math.random() * 256)}, 
+  ${Math.floor(Math.random() * 256)}, 
+  ${Math.floor(Math.random() * 256)})`;
 
   changePar.style.color = randomColor;
 }
@@ -88,6 +87,7 @@ function inputValue() {
   }
   input1.value = "";
 }
+
 // чат GPT HELP
 function handleKeyPress(event) {
   if (event.keyCode === 13) {
@@ -133,7 +133,7 @@ let smtArr = [];
 //   myPar.textContent = '1' + input5.value ;
 // });
 
-//  сторення елементів
+//  сторення елементів // TODOLIST
 const body = document.querySelector("body");
 
 btn5.addEventListener("click", () => {
@@ -172,14 +172,13 @@ input5.addEventListener("keydown", function (event) {
 let storedToDos = localStorage.getItem("todos"); //в дужках-за яким ключем беремо
 //convert string-back arr
 let parseToDos = JSON.parse(storedToDos);
-console.log(parseToDos);
+// console.log(parseToDos);
 
-for (let index = 0; index < parseToDos.length; index++) {
-  const toDoSpar = document.createElement("p");
-  toDoSpar.textContent = parseToDos[index];
-  // toDoSpar.insertAdjacentElement("afterend", btn5);
-  body.appendChild(toDoSpar);
-}
+// for (let index = 0; index < parseToDos.length; index++) {
+//   const toDoSpar = document.createElement("p");
+//   toDoSpar.textContent = parseToDos[index];
+//   body.appendChild(toDoSpar);
+// }
 
 //  hometask.13.06 : норм хедер щоб гамбургер працював & відео
 
@@ -202,11 +201,10 @@ btn6.addEventListener("click", () => {
 });
 
 // task 2  оприділяємо куди клікав користувач
-const answers = document.querySelectorAll(".answ");//всі класи вибрали
-
+const answers = document.querySelectorAll(".answ"); //всі класи вибрали
 for (let index = 0; index < answers.length; index++) {
   answers[index].addEventListener("click", (e) => {
-    console.log(e.target.id);
+    // console.log(e.target.id);
     alert(document.getElementById(e.target.id).textContent);
   });
 }
@@ -219,7 +217,22 @@ for (let index = 0; index < answers.length; index++) {
 //localStorage.getItem("myCat"); // отримуємо локал сторидж. вказавши ключ
 // alert(localStorage.getItem("myCat")); // Tom
 
-/// 20 06 online lessons
+// lesson 20 06
+// loop s
+const paragLorem = document.querySelectorAll(".papag-lorem");
 
+for (let index = 0; index < paragLorem.length; index++) {
+  let longer = []
+  
+  longer.push.paragLorem[index].textContent.length;
 
+  // if (paragLorem[index].innerText === "Привіт") {
+  //   paragLorem[index].addEventListener("click", () => {
+ 
+  //   });
+  // }
 
+}
+ 
+ 
+ 
