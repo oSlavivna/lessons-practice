@@ -183,3 +183,24 @@ console.log(indexName);
 // re make on arrow funk =>
 const filterAge2 = subscribers.filter((item) => item.age >= 22);
 console.log(filterAge2);
+
+// 16 <!-- ту ду ліст -->
+const inputodo = document.querySelector(".input-conteiner input");
+const btnTodo = document.querySelector(".input-conteiner button");
+const toDOList = document.querySelector(".todo-list");
+
+btnTodo.addEventListener("click", () => {
+  const li = document.createElement("li");
+  li.className = 'list-li'
+  li.innerText = inputodo.value;
+
+  const deletebtn = document.createElement('button')
+  deletebtn.innerText = 'delete';
+  li.appendChild(deletebtn); 
+  toDOList.appendChild(li); s
+  inputodo.value = ''
+
+  deletebtn.addEventListener('click', () =>{
+    toDOList.removeChild(li)
+  })
+});

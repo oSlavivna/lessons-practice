@@ -28,4 +28,35 @@ btn1.addEventListener("click", () => {
     body.appendChild(newUserPar);
   }
 });
+ /// try work with JSON
+ const input2 = document.querySelector("#input2");
+const btn2 = document.querySelector("#btn2");
+ let input2value = input2.value ;
+//  localStorage.setItem("example", JSON.stringify(input2value));
+btn2.addEventListener('click', () => {
+
+})
+
+///https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/
+
+// fetch('https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/')
+//   .then(response => response.json())
+//   .then(data => {
+//     const properties = {};
+
+//     for (let property in data) {
+//       properties[property] = data[property];
+//     }
+
+//     console.log('Properties:', properties);
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
+
  
+
+
+
+
+

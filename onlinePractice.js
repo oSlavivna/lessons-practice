@@ -201,8 +201,8 @@ btn6.addEventListener("click", () => {
   input6.value = "";
 });
 
-// task 2
-const answers = document.querySelectorAll(".answ");
+// task 2  оприділяємо куди клікав користувач
+const answers = document.querySelectorAll(".answ");//всі класи вибрали
 
 for (let index = 0; index < answers.length; index++) {
   answers[index].addEventListener("click", (e) => {
@@ -218,5 +218,8 @@ for (let index = 0; index < answers.length; index++) {
 //localStorage.setItem("myCat", "Tom"); // записуємо
 //localStorage.getItem("myCat"); // отримуємо локал сторидж. вказавши ключ
 // alert(localStorage.getItem("myCat")); // Tom
+
+/// 20 06 online lessons
+
 
 
