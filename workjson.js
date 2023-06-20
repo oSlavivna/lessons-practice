@@ -5,33 +5,36 @@
 якщо в локал стoридж вже є iм`я користувача, 
 то імпут з кнопкою не показуються, 
 а видно параграф зі словами - Привіт, імя користувача. */
-
+const body = document.querySelector("body");
+const wrapper = document.querySelector(".wrapper");
 const input1 = document.querySelector("#input1");
 const btn1 = document.querySelector("#btn1");
-const body = document.querySelector("body");
+const justPar = document.querySelector("#taskHidden");
 
-btn1.addEventListener("click", () => {
-  if (input1.value !== "olha") {
-    input1.value = "";
-  } else {
-    localStorage.setItem("userName", input1.value);
-    let userInputName = localStorage.getItem("userName");
-    //
-    input1.style.display = "none";
-    btn1.style.display = "none";
+ let userInputName = localStorage.getItem("userName");
 
-    const newUserPar = document.createElement("p");
-    newUserPar.textContent = "Hello " + userInputName;
-    body.appendChild(newUserPar);
+function createElement() {
+  const newUserPar = document.createElement("p");
+  newUserPar.textContent = "Привіт " + userInputName;
+  justPar.insertAdjacentElement("afterend", newUserPar);
+  wrapper.style.display = "none";
+}
+ 
+ if (userInputName ) {
+  createElement();
+} else {
+  btn1.addEventListener("click", () => {
+ localStorage.setItem("userName", input1.value); 
+    createElement(); })
   }
-});
 
-/// try work with JSON
-const input2 = document.querySelector("#input2");
-const btn2 = document.querySelector("#btn2");
-let input2value = input2.value;
-//  localStorage.setItem("example", JSON.stringify(input2value));
-btn2.addEventListener("click", () => {});
+
+   
+
+
+
+
+// addEventListener("click", () => {});
 
 // домашка від 20 червня
 // завдання 3/клік на довший параграф
@@ -69,7 +72,7 @@ salaryBtn.addEventListener("click", () => {
   let sumSalaty = Number(salary.value);
   let addional = sumSalaty * 0.15;
   let taxes = (sumSalaty + addional) * 0.1;
-  let costs = 190; 
+  let costs = 190;
   let rest = (sumSalaty + addional - taxes - costs) / 2;
 
   const neWpar2 = document.createElement("p");
@@ -78,7 +81,6 @@ salaryBtn.addEventListener("click", () => {
 });
 
 // завдання 5 - зробити верстку для тудуЛист і розуміти його код
-
 
 // додати до тудулиста новий функціонал - якщо вводять завдання, яке вже є списку, то
 // в алерт сповіщаємо, що завдання таке вже записано
