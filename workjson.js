@@ -80,9 +80,68 @@ salaryBtn.addEventListener("click", () => {
 });
 
 // завдання 5 - зробити верстку для тудуЛист і розуміти його код
-
 // додати до тудулиста новий функціонал - якщо вводять завдання, яке вже є списку, то
 // в алерт сповіщаємо, що завдання таке вже записано
+const wrapperList = document.querySelector(".wrapperList");
+const inputList = document.querySelector(".wrapperList input");
+const buttonList = document.querySelector(".wrapperList button");
+const affairsDiv = document.querySelector(".affairs");
+
+let storedToDos = localStorage.getItem("toDos");
+let parsedToDos = JSON.parse(storedToDos);
+let toDosArray = [];
+
+if (storedToDos) {
+  toDosArray = parsedToDos;
+}
+
+buttonList.addEventListener("click", () => {
+  if (inputList.value != "") {
+    toDosArray.push(inputList.value);
+    localStorage.setItem("toDos", JSON.stringify(toDosArray));
+
+    addToDos();
+
+    inputList.value = "";
+  } else {
+    alert("no case recorded");
+  }
+});
+
+addToDos();
+
+function addToDos() {
+  storedToDos = localStorage.getItem("toDos");
+  parsedToDos = JSON.parse(storedToDos);
+
+  if (storedToDos) {
+    affairsDiv.innerHTML = "";
+
+    for (let index = 0; index < parsedToDos.length; index++) {
+      const container = document.createElement("div");
+
+      const par = document.createElement("p");
+      par.textContent = parsedToDos[index];
+      container.appendChild(par);
+
+      const button = document.createElement("button");
+      button.textContent = "delete";
+      button.setAttribute("data-index", index);
+      container.appendChild(button);
+
+      affairsDiv.appendChild(container);
+
+      button.addEventListener("click", function () {
+        const index = button.getAttribute("data-index");
+        toDosArray.splice(index, 1);
+
+        localStorage.setItem("toDos", JSON.stringify(toDosArray));
+
+        affairsDiv.removeChild(container);
+      });
+    }
+  }
+}
 
 // .......................................
 ///https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/
