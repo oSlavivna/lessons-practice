@@ -94,20 +94,33 @@ let toDosArray = [];
 if (storedToDos) {
   toDosArray = parsedToDos;
 }
-
+buttonList.style.cursor = "pointer";
 buttonList.addEventListener("click", () => {
   if (inputList.value != "") {
     toDosArray.push(inputList.value);
     localStorage.setItem("toDos", JSON.stringify(toDosArray));
+    ///................
 
+    // for (let index = 0; index < toDosArray.length; index++) {
+    //   let element = toDosArray[index];
+
+    //   if (inputList.value === element.textContent) {
+    //     alert("таке завдання  вже записано ");
+    //   }
+    //   console.log( element);
+    //   console.log( inputList.value);
+    // }
+    ////////...........
     addToDos();
-
     inputList.value = "";
   } else {
     alert("no case recorded");
   }
 });
 
+/////////////////
+ 
+///////////////
 addToDos();
 
 function addToDos() {
@@ -125,6 +138,7 @@ function addToDos() {
       container.appendChild(par);
 
       const button = document.createElement("button");
+      button.style.cursor = "pointer";
       button.textContent = "delete";
       button.setAttribute("data-index", index);
       container.appendChild(button);
@@ -142,6 +156,8 @@ function addToDos() {
     }
   }
 }
+// додати до тудулиста новий функціонал - якщо вводять завдання, яке вже є списку, то
+// в алерт сповіщаємо, що завдання таке вже записано
 
 // .......................................
 ///https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/
