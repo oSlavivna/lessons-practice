@@ -94,23 +94,13 @@ let toDosArray = [];
 if (storedToDos) {
   toDosArray = parsedToDos;
 }
+
 buttonList.style.cursor = "pointer";
 buttonList.addEventListener("click", () => {
   if (inputList.value != "") {
     toDosArray.push(inputList.value);
     localStorage.setItem("toDos", JSON.stringify(toDosArray));
-    ///................
-
-    // for (let index = 0; index < toDosArray.length; index++) {
-    //   let element = toDosArray[index];
-
-    //   if (inputList.value === element.textContent) {
-    //     alert("таке завдання  вже записано ");
-    //   }
-    //   console.log( element);
-    //   console.log( inputList.value);
-    // }
-    ////////...........
+   
     addToDos();
     inputList.value = "";
   } else {
@@ -118,9 +108,6 @@ buttonList.addEventListener("click", () => {
   }
 });
 
-/////////////////
- 
-///////////////
 addToDos();
 
 function addToDos() {
