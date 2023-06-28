@@ -145,33 +145,104 @@ function addToDos() {
 }
 //X додати до тудулиста новий функціонал - якщо вводять завдання, яке вже є списку, то
 // в алерт сповіщаємо, що завдання таке вже записано
-//..............................................................................
-let allArray = [];
+const apiUrl =
+  "https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes";
+let itemsFromJson = [];
 
-fetch("https://dummyjson.com/products/")
+fetch(apiUrl)
+  .then((response) => response.json())
+  .then((json) => {
+    itemsFromJson = json.items;
+    // processItems(itemsFromJson);
+
+    const fullData = itemsFromJson.filter(function (name) {
+      return name.length >= 7;
+    });
+    // console.log(fullData); // empty
+  });
+//
+//  function processItems(items) {
+//   const filteredItems = items.filter((item) => {
+//     return item.name.length <= 10 && item.phone;
+//   });
+//   console.log(filteredItems);
+// }
+//
+
+//
+// console.log(fullData);
+
+// for (const i of itemsFromJson) {
+//    console.log(i.name + i.phone);
+// }
+
+//..............................................................................
+// HOMETASK FROM 27 06  Продублюю тут:
+// Так ми виводимо в консоль назви товарів
+// let arr = [];
+// fetch("https://dummyjson.com/products")
+//   .then((res) => res.json())
+//   .then((json) => {
+//     arr = json.products;
+//     console.log(arr);
+//     // console.log(json.products);
+//     console.log(json.products[6].price);
+
+//     for (let index = 0; index < arr.length; index++) {
+//       const pricrEl = arr[index].price;
+//       const pricEl = allArray[index].price;
+//       const elName = arr[index].title;
+
+//       let elPonPage = document.createElement("p");
+
+//       if (pricEl >= 40) {
+//       if (pricrEl >= 40) {
+//         elPonPage.textContent = `◽ ${elName}, price: ${pricrEl}.`;
+//         wrapperList.insertAdjacentElement("afterend", elPonPage);
+//       }
+//     }
+//   });
+// Завдання 1 - показати назви тільки тих товарів, ціна яких вища за 40
+// Завдання 2 - вивести результат 1-го завдання на сторінку
+// Завдання 3 - показати на сторінці поруч із назвою ціну товара
+
+//..............................................................................
+const boxWraps = document.querySelectorAll(".box-wrap"); // всі діви з цим класом
+const taskthree = document.querySelector(".taskthree");  
+
+fetch("https://dummyjson.com/products")
   .then((res) => res.json())
-  // .then(json => console.log(json.title))
+  /////// .then(json => console.log(json.title))
   .then((json) => {
     allArray = json.products;
     console.log(allArray);
 
-    for (let index = allArray.length -1 ; index >= 0 ; index--) {
-    // for (let index = 0; index < allArray.length; index++) {
+    for (let index = allArray.length - 1; index >= 0; index--) {
+      // for (let index = 0; index < allArray.length; index++) {
       const element = allArray[index].title;
-      const descripption = allArray[index].description;
-      const imageProduct = allArray[index].images[0]
-   
+      const imageProduct = allArray[index].images[0];
+      const pricEl = allArray[index].price;
       // console.log(element);
-      let arrImg = document.createElement('img');
+      let arrImg = document.createElement("img");
       arrImg.src = imageProduct;
-      arrImg.className = 'arrimgsize';
-      let arrPar = document.createElement('p')
-      arrPar.textContent = ` ${element}. ${descripption}  📱  `;
-      arrPar.appendChild(arrImg);
-      wrapperList.insertAdjacentElement("afterend", arrPar);
+      arrImg.className = "arrimgsize";
+
+      let arrPar = document.createElement("div");
+      arrPar.className = "divwithjon";
+      if (pricEl >= 40) {
+        arrPar.textContent = `◽ ${element}, price: ${pricEl}💸`;
+        arrPar.appendChild(arrImg);
+        // taskthree.insertAdjacentElement("afterend", arrPar);
+        // Перевіряємо, чи існує четвертий елемент
+        if (boxWraps.length >= 4) {
+          const fourthBoxWrap = boxWraps[3];
+          fourthBoxWrap.insertAdjacentElement("afterend", arrPar);
+        }
+      }
     }
-  });  
- 
+  });
+
+// ..........................................
 // .then(json => console.log(json)) //X
 // setTimeout(() => {
 //   console.log(allArray);
@@ -180,11 +251,17 @@ fetch("https://dummyjson.com/products/")
 // .then(json => allArray = json)
 // console.log(allArray);
 // .......................................
-const apiUrl = 'https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/'
+
+// const apiUrl = 'https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes';
 //  fetch('https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/')
 
 //  fetch( apiUrl )
 //   .then(response => response.json())
+///////////////
+//  .then((json) => {
+
+//     console.log(json);
+///////////////
 //   .then(posts => {
 //     question = posts
 //     console.log(question);
