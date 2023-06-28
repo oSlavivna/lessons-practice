@@ -13,12 +13,13 @@ body {
 }
 p {
   margin-block: 1rem; 
-}
+  }
 .box-wrap {
   background-color: rgba(211, 239, 255, 0.363);
   border-radius: 2rem;
   padding: 1.5rem;
   width: max-content;
+  height: min-content;
 }
 button,
 a {
@@ -87,3 +88,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 15px;
 }
 /*  */
+.arrimgsize {
+  width: 30%;
+  height: auto;
+}

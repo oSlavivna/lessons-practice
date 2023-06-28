@@ -100,7 +100,7 @@ buttonList.addEventListener("click", () => {
   if (inputList.value != "") {
     toDosArray.push(inputList.value);
     localStorage.setItem("toDos", JSON.stringify(toDosArray));
-   
+
     addToDos();
     inputList.value = "";
   } else {
@@ -143,23 +143,64 @@ function addToDos() {
     }
   }
 }
-// додати до тудулиста новий функціонал - якщо вводять завдання, яке вже є списку, то
+//X додати до тудулиста новий функціонал - якщо вводять завдання, яке вже є списку, то
 // в алерт сповіщаємо, що завдання таке вже записано
+//..............................................................................
+let allArray = [];
 
+fetch("https://dummyjson.com/products/")
+  .then((res) => res.json())
+  // .then(json => console.log(json.title))
+  .then((json) => {
+    allArray = json.products;
+    console.log(allArray);
+
+    for (let index = allArray.length -1 ; index >= 0 ; index--) {
+    // for (let index = 0; index < allArray.length; index++) {
+      const element = allArray[index].title;
+      const descripption = allArray[index].description;
+      const imageProduct = allArray[index].images[0]
+   
+      // console.log(element);
+      let arrImg = document.createElement('img');
+      arrImg.src = imageProduct;
+      arrImg.className = 'arrimgsize';
+      let arrPar = document.createElement('p')
+      arrPar.textContent = ` ${element}. ${descripption}  📱  `;
+      arrPar.appendChild(arrImg);
+      wrapperList.insertAdjacentElement("afterend", arrPar);
+    }
+  });  
+ 
+// .then(json => console.log(json)) //X
+// setTimeout(() => {
+//   console.log(allArray);
+// }, 1000);
+
+// .then(json => allArray = json)
+// console.log(allArray);
 // .......................................
-///https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/
+const apiUrl = 'https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/'
+//  fetch('https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/')
 
-// fetch('https://g2cb1fdcabb8c9f-dbeducation.adb.eu-frankfurt-1.oraclecloudapps.com/ords/newswire/notes/allnotes/')
+//  fetch( apiUrl )
 //   .then(response => response.json())
-//   .then(data => {
-//     const properties = {};
+//   .then(posts => {
+//     question = posts
+//     console.log(question);
+//     // console.log(question.name);
 
-//     for (let property in data) {
-//       properties[property] = data[property];
-//     }
-
-//     console.log('Properties:', properties);
 //   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
+
+// .then(data => {
+//   const properties = {};
+
+//   for (let property in data) {
+//     properties[property] = data[property];
+//   }
+
+//   console.log('Properties:', properties);
+// })
+// .catch(error => {
+//   console.error('Error:', error);
+// });
