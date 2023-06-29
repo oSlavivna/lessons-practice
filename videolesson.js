@@ -197,7 +197,7 @@ btnTodo.addEventListener("click", () => {
   const deletebtn = document.createElement('button')
   deletebtn.innerText = 'delete';
   li.appendChild(deletebtn); 
-  toDOList.appendChild(li); s
+  toDOList.appendChild(li); 
   inputodo.value = ''
 
   deletebtn.addEventListener('click', () =>{
