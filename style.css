@@ -315,7 +315,7 @@ img {
 
   position: absolute;
   left: 3rem;
-  top: 5%;
+  top: 10px;
   z-index: 6;
 }
 .home {
