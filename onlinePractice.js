@@ -18,9 +18,8 @@ for (let i = 0; i < arr.length; i++) {
 }
 // dom manipulation
 const title = document.getElementById("title");
-console.log(title);
-
 title.style.backgroundColor = "yellow";
+
 // параграфи
 const parag = document.getElementById("parag");
 parag.style.color = "blue";
@@ -88,7 +87,7 @@ function inputValue() {
   input1.value = "";
 }
 
-// чат GPT HELP
+//  HELP
 function handleKeyPress(event) {
   if (event.keyCode === 13) {
     inputValue();
