@@ -102,9 +102,11 @@ const btn4 = document.querySelector("#btn4");
 const input2 = document.querySelector("#input2");
 
 function yourAge() {
-  let userAge = 2023 - input2.value;
+  const curDate = new Date();
+const year = curDate.getFullYear();
+  let userAge = year - input2.value;
   if (!input2.value) {
-    alert("2023 not your birth year");
+    alert(`${year} is not your birth year`);
   } else {
     alert(userAge);
   }
